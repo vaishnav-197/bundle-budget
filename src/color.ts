@@ -1,0 +1,25 @@
+export type Paint = (text: string) => string;
+
+export interface Colors {
+  red: Paint;
+  green: Paint;
+  bold: Paint;
+  dim: Paint;
+}
+
+/** Colours are used only on a terminal, and never when NO_COLOR is set (https://no-color.org). */
+export function shouldUseColor(isTTY: boolean | undefined, env: NodeJS.ProcessEnv): boolean {
+  return isTTY === true && !env.NO_COLOR;
+}
+
+const ansi =
+  (open: number, close: number): Paint =>
+  (text) =>
+    `\u001b[${open}m${text}\u001b[${close}m`;
+
+const plain: Paint = (text) => text;
+
+export function createColors(enabled: boolean): Colors {
+  if (!enabled) return { red: plain, green: plain, bold: plain, dim: plain };
+  return { red: ansi(31, 39), green: ansi(32, 39), bold: ansi(1, 22), dim: ansi(2, 22) };
+}
