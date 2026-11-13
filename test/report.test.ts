@@ -140,7 +140,7 @@ describe('shouldUseColor', () => {
     expect(shouldUseColor(false, {})).toBe(false);
     expect(shouldUseColor(undefined, {})).toBe(false);
     expect(shouldUseColor(true, { NO_COLOR: '1' })).toBe(false);
-    expect(shouldUseColor(true, { NO_COLOR: '' })).toBe(true);
+    expect(shouldUseColor(true, { NO_COLOR: '' })).toBe(false);
   });
 });
 

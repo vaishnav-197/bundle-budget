@@ -7,9 +7,9 @@ export interface Colors {
   dim: Paint;
 }
 
-/** Colours are used only on a terminal, and never when NO_COLOR is set (https://no-color.org). */
+/** Colours are used only on a terminal, and never when NO_COLOR is set, even to an empty value. */
 export function shouldUseColor(isTTY: boolean | undefined, env: NodeJS.ProcessEnv): boolean {
-  return isTTY === true && !env.NO_COLOR;
+  return isTTY === true && env.NO_COLOR === undefined;
 }
 
 const ansi =
