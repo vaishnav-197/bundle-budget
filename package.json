@@ -1,0 +1,42 @@
+{
+  "name": "bundle-budget",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Check Vite and Webpack bundle sizes against budgets and fail CI when one is exceeded.",
+  "keywords": [
+    "bundle",
+    "size",
+    "budget",
+    "webpack",
+    "vite",
+    "ci",
+    "gzip",
+    "brotli"
+  ],
+  "license": "MIT",
+  "author": "vaishnav-197",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vaishnav-197/bundle-budget.git"
+  },
+  "type": "module",
+  "bin": {
+    "bundle-budget": "dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.5",
+    "typescript": "7.0.2",
+    "vitest": "5.0.5"
+  }
+}
