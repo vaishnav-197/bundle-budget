@@ -1,0 +1,9 @@
+{
+  "compression": "gzip",
+  "budgets": [
+    { "asset": "js/main.*.js", "max": "10 KB" },
+    { "chunk": "vendor", "max": "100 KB" },
+    { "asset": "css/*.css", "max": "2 KB", "compression": "raw" }
+  ],
+  "total": { "max": "100 KB", "compression": "brotli" }
+}

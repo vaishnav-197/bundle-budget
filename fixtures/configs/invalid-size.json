@@ -1,0 +1,6 @@
+{
+  "budgets": [
+    { "asset": "js/*.js", "max": "100 KB" },
+    { "asset": "css/*.css", "max": "15 kilobytes" }
+  ]
+}

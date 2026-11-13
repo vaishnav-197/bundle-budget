@@ -1,0 +1,3 @@
+{
+  "budgets": [{ "asset": "static/app-*.js", "max": "100 KB" }]
+}

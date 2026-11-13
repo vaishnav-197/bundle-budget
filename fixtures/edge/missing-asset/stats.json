@@ -1,0 +1,16 @@
+{
+  "version": "5.112.1",
+  "outputPath": "dist",
+  "assets": [
+    { "name": "js/main.js", "size": 65, "chunks": ["main"], "chunkNames": ["main"] },
+    { "name": "js/lazy.js", "size": 40, "chunks": ["lazy"], "chunkNames": ["lazy"] }
+  ],
+  "chunks": [
+    { "id": "main", "names": ["main"], "files": ["js/main.js"], "initial": true, "entry": true },
+    { "id": "lazy", "names": ["lazy"], "files": ["js/lazy.js"], "initial": false, "entry": false }
+  ],
+  "modules": [
+    { "name": "./src/index.js", "size": 65, "chunks": ["main"] },
+    { "name": "./src/lazy.js", "size": 40, "chunks": ["lazy"] }
+  ]
+}

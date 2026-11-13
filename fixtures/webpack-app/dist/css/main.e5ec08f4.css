@@ -1,0 +1,4 @@
+:root { font-family: system-ui, sans-serif; color: #222; }
+main { max-width: 40rem; margin: 2rem auto; padding: 0 1rem; }
+button, input { font: inherit; padding: 0.4rem 0.8rem; }
+
